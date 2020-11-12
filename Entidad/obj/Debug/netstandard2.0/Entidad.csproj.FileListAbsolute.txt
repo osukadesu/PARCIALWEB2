@@ -1,0 +1,9 @@
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\bin\Debug\netstandard2.0\Entidad.deps.json
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\bin\Debug\netstandard2.0\Entidad.dll
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\bin\Debug\netstandard2.0\Entidad.pdb
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\obj\Debug\netstandard2.0\Entidad.csprojAssemblyReference.cache
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\obj\Debug\netstandard2.0\Entidad.AssemblyInfoInputs.cache
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\obj\Debug\netstandard2.0\Entidad.AssemblyInfo.cs
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\obj\Debug\netstandard2.0\Entidad.csproj.CoreCompileInputs.cache
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\obj\Debug\netstandard2.0\Entidad.dll
+C:\Users\Osuka\Desktop\PARCIALWEB2\Entidad\obj\Debug\netstandard2.0\Entidad.pdb
