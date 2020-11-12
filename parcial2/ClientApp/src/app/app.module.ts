@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
+import { PersonaRegistroComponent } from './parcial2/persona-registro/persona-registro.component';
+import { PersonaConsultaComponent } from './parcial2/persona-consulta/persona-consulta.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
     CounterComponent,
     FetchDataComponent,
     FooterComponent,
-    AlertModalComponent
+    AlertModalComponent,
+    PersonaRegistroComponent,
+    PersonaConsultaComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

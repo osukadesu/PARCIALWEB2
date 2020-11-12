@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj": {}
+    "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj": {
+    "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj",
+        "projectUniqueName": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj",
+        "projectPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\Osuka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\obj\\",
+        "outputPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Osuka\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj"
+              "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj": {
+                "projectPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj": {
+    "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj",
+        "projectUniqueName": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj",
         "projectName": "Entidad",
-        "projectPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj",
+        "projectPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj",
         "packagesPath": "C:\\Users\\Osuka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\obj\\",
+        "outputPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Osuka\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -124,14 +124,14 @@
         }
       }
     },
-    "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj": {
+    "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj",
+        "projectUniqueName": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj",
+        "projectPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\Logica.csproj",
         "packagesPath": "C:\\Users\\Osuka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\obj\\",
+        "outputPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Osuka\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -145,11 +145,11 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj"
+              "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj": {
+                "projectPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj": {
-                "projectPath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj"
+              "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj": {
+                "projectPath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj"
               }
             }
           }
