@@ -16,8 +16,8 @@ namespace Datos
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .Entity<Proveedor>()
-                .HasOne<Persona>()
+                .Entity<Persona>()
+                .HasOne<Proveedor>()
                 .WithMany()
                 .HasForeignKey(p => p.Cedula);
         }
