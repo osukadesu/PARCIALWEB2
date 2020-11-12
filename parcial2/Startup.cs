@@ -1,4 +1,5 @@
 using System;
+using Datos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -47,13 +48,9 @@ namespace parcial2
                 });
             });
 
-            //contextos base de datos OSCAR ARREGLAR
-            /*
-
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
-            services.AddDbContext<HotelContext>(Context => Context.UseSqlServer(connectionString));
+            services.AddDbContext<ParcialContext>(Context => Context.UseSqlServer(connectionString));
             
-            */
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";

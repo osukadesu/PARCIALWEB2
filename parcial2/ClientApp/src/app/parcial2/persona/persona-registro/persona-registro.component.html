@@ -1,0 +1,87 @@
+<title>REGISTRO PERSONA</title>
+<br>
+<div align="center"><img src="assets/registrar.png" alt="Logo">
+    <h1>REGISTRO PERSONA</h1>
+</div><br>
+<div id="divcontainer" class="forms">
+    <form id="FormularioRegistro" [formGroup]="formregistro">
+        <div class="form-group">
+            <label>Cedula</label>
+            <input id= cedula name="cedula" [ngClass]="{'is-invalid': control.cedula.errors && control.cedula.touched}"
+                type="text"  formControlName="cedula" placeholder="Cedula">
+            <div *ngIf="control.cedula.errors" class="invalid-feedback">
+                <div *ngIf="control.cedula.errors.required">Se requiere la cedula</div>
+                <div *ngIf="control.cedula.errors.maxlength">Caracteres mayores a 12</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Nombre</label>
+            <input type="text" id="nombre" name="nombre"
+                [ngClass]="{'is-invalid': control.nombre.errors && control.nombre.touched}"
+                formControlName="nombre" placeholder="Nombre">
+            <div *ngIf="control.nombre.errors" class="invalid-feedback">
+                <div *ngIf="control.nombre.errors.required">Se requiere el nombre</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Apellido</label>
+            <input type="text" id="apellido" name="apellido"
+                [ngClass]="{'is-invalid': control.apellido.errors && control.apellido.touched}"
+                formControlName="apellido" placeholder="Apellido">
+            <div *ngIf="control.apellido.errors" class="invalid-feedback">
+                <div *ngIf="control.apellido.errors.required">Se requiere el apellido</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Sexo</label>
+            <select id="sexo" name="sexo" formControlName="sexo"
+                [ngClass]="{'is-invalid': control.sexo.errors && control.sexo.touched}">
+                <option value="seleccionar">Seleccionar</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+            <div *ngIf="control.sexo.errors" class="invalid-feedback">
+                <div *ngIf="control.sexo.errors.required">Se requiere el sexo</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Edad</label><br>
+            <input type="number" id="edad" name="edad"
+                [ngClass]="{'is-invalid': control.edad.errors && control.edad.touched}" formControlName="edad"
+                placeholder="Edad">
+            <div *ngIf="control.edad.errors" class="invalid-feedback">
+                <div *ngIf="control.edad.errors.required">Se requiere la edad</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Telefono</label><br>
+            <input type="number" id="telefono" name="telefono"
+                [ngClass]="{'is-invalid': control.telefono.errors && control.telefono.touched}"
+                formControlName="telefono" placeholder="Telefono">
+            <div *ngIf="control.telefono.errors" class="invalid-feedback">
+                <div *ngIf="control.telefono.errors.required">Se requiere el telefono</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="text" id="email" name="email"
+                [ngClass]="{'is-invalid': control.email.errors && control.email.touched}" formControlName="email"
+                placeholder="Email">
+            <div *ngIf="control.email.errors" class="invalid-feedback">
+                <div *ngIf="control.email.errors.required">Se requiere el email</div>
+            </div>
+        </div>
+        <br>
+        <button id="divcontainer2" class="btn btn-primary" (click)="onSubmit()" [disabled]="formregistro.invalid">
+            <span>
+                <a href="https://localhost:5001/clienteregistro"></a>
+            </span>
+            Guardar</button>
+    </form>
+</div>
