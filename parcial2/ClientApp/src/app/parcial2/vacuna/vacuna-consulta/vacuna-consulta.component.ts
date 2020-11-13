@@ -14,7 +14,6 @@ export class VacunaConsultaComponent implements OnInit {
   vacunas: Vacuna[];
   searchText: string;
   constructor(private vacunaService: VacunaService , private estudianteService: EstudianteService) { }
-
   ngOnInit(){
     
     this.estudianteService.get().subscribe(result => {

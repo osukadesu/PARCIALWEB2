@@ -9,6 +9,7 @@ import { Estudiante } from '../parcial2/models/estudiante';
   providedIn: 'root'
 })
 export class EstudianteService {
+  [x: string]: any;
 
   baseUrl: string;
   constructor(
