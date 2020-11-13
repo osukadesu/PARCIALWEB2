@@ -77,6 +77,29 @@
                 <div *ngIf="control.email.errors.required">Se requiere el email</div>
             </div>
         </div>
+
+        <div>
+            <label>Nombre Acudiente</label>
+            <input type="text" id="nombreacudiente" name="nombreacudiente"
+                [ngClass]="{'is-invalid': control.nombreacudiente.errors && control.nombreacudiente.touched}"
+                formControlName="nombreacudiente" placeholder="Nombre Acudiente">
+            <div *ngIf="control.nombreacudiente.errors" class="invalid-feedback">
+                <div *ngIf="control.nombreacudiente.errors.required">Se requiere el nombre del acudiente</div>
+            </div>
+        </div>
+
+        
+        <div>
+            <label>Colegio</label>
+            <input type="text" id="colegio" name="colegio"
+                [ngClass]="{'is-invalid': control.colegio.errors && control.colegio.touched}"
+                formControlName="colegio" placeholder="Nombre Acudiente">
+            <div *ngIf="control.colegio.errors" class="invalid-feedback">
+                <div *ngIf="control.colegio.errors.required">Se requiere el nombre del colegio</div>
+            </div>
+        </div>
+
+
         <br>
         <button id="divcontainer2" class="btn btn-primary" (click)="onSubmit()" [disabled]="formregistro.invalid">
             <span>

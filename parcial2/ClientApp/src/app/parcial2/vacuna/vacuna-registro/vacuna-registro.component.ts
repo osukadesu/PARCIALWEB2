@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { EstudianteService } from 'src/app/services/estudiante.service';
 import { VacunaService } from 'src/app/services/vacuna.service';
+import { Estudiante } from '../../models/estudiante';
 import { Vacuna } from '../../models/vacuna';
 
 @Component({
@@ -11,15 +13,19 @@ import { Vacuna } from '../../models/vacuna';
   styleUrls: ['./vacuna-registro.component.css']
 })
 export class VacunaRegistroComponent implements OnInit {
-
+  estudiantes: Estudiante[];
   formregistro: FormGroup;
   vacuna: Vacuna;
-  constructor(private vacunaService: VacunaService, private formBuilder: FormBuilder,
+  constructor(private vacunaService: VacunaService, private estudianteService: EstudianteService, private formBuilder: FormBuilder,
     private modalService: NgbModal) { }
 
   ngOnInit() {
     this.vacuna = new Vacuna();
     this.buildForm();
+    
+    this.estudianteService.get().subscribe(result => {
+      this.estudiantes = result;
+      });
   }
   private buildForm() {
     this.vacuna = new Vacuna();
@@ -31,8 +37,8 @@ export class VacunaRegistroComponent implements OnInit {
     this.formregistro = this.formBuilder.group({
       idvacuna: [this.vacuna.idvacuna, [Validators.required, Validators.maxLength(12)]],
       tipovacuna: [this.vacuna.tipovacuna, Validators.required],
-      fechavacuna: [this.vacuna.fechavacuna, Validators.required],
-      cedula: [this.vacuna.cedula, Validators.required],
+      fechavacuna: [this.vacuna.fechavacuna, [Validators.required, Validators.min(1)]],
+      cedula: [this.vacuna.cedula, [Validators.required, Validators.maxLength(12), this.ValidaCedula]],
      
     });
   }

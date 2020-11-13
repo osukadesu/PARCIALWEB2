@@ -14,22 +14,19 @@
         <thead>
             <tr class="thead-dark">
                 <th (click)="sortTable(0)" scope="col">#</th>
-                <th (click)="sortTable(1)">Cedula</th>
-                <th (click)="sortTable(2)">Nombre</th>
-                <th (click)="sortTable(5)">Apellido</th>
-                <th (click)="sortTable(6)">Fecha de Nacimiento</th>
-                <th (click)="sortTable(7)">Email</th>
-                <th (click)="sortTable(8)">Sexo</th>
-                <th (click)="sortTable(9)">Telefono</th>
+                <th (click)="sortTable(1)">Id Vacuna</th>
+                <th (click)="sortTable(2)">Tipo de Vacuna</th>
+                <th (click)="sortTable(5)">Fecha de Vacuna</th>
+                <th (click)="sortTable(6)">Cedula Estudiante</th>
                 <!-- <th (click)="sortTable(12)">Modificar/Eliminar</th> -->
             </tr>
         </thead>
         <tbody id="tbodypulsacion" class="table-primary">
             <tr *ngFor="let vacuna of vacunas|filtroVacuna:searchText; index as i ">
                 <td scope="row">{{ i + 1 }}</td>
-                <td>{{ vacuna.idvacuna }} </td>
-                <td>{{ vacuna.tipovacuna}}</td>
-                <td>{{ vacuna.fechavacuna }}</td>
+                <td>{{ vacuna.idVacuna }} </td>
+                <td>{{ vacuna.tipoVacuna}}</td>
+                <td>{{ vacuna.fechaVacuna }}</td>
                 <td>{{ vacuna.cedula }}</td>
                <!-- <td> <a routerLink='/personaEdicion/{{cliente.cedula}}'>Modificar</a> <button id="divcontainer2" class="btn btn-primary">Eliminar</button></td> --> 
             </tr>
