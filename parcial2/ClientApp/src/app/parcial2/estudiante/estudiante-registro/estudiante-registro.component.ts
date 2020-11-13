@@ -29,7 +29,7 @@ export class EstudianteRegistroComponent implements OnInit {
     this.estudiante.sexo = 'seleccionar';
     this.estudiante.email = '';
     this.estudiante.fechaNacimiento;
-    this.estudiante.telefono=0;
+    this.estudiante.telefono;
     this.estudiante.nombreAcudiente = '';
     this.estudiante.colegio ='';
 

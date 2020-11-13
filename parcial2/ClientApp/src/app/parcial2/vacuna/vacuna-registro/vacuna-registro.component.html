@@ -13,8 +13,11 @@
             <label for="estudiante">Seleccionar Cedula del Estudiante</label>
             <select id="cedula" name="cedula"
                 [ngClass]="{'is-invalid': control.cedula.errors && control.cedula.touched}" formControlName="cedula">
-                <option value="seleccionar">Seleccionar</option>
                 <option *ngFor="let estudiante of estudiantes" value={{estudiante.cedula}}>Cedula: {{estudiante.cedula}}</option>
+
+                <div *ngIf="control.cedula.errors" class="invalid-feedback">
+                    <div *ngIf="control.cedula.errors.required">Se requiere la cedula</div>
+                </div>
             </select>
             <div *ngIf="control.cedula.errors" class="invalid-feedback">
                 <div *ngIf="control.cedula.errors.required">Se requiere la cedula</div>
@@ -36,7 +39,6 @@
             <select id="tipoVacuna" name="tipoVacuna"
                 [ngClass]="{'is-invalid': control.tipoVacuna.errors && control.tipoVacuna.touched}"
                 formControlName="tipoVacuna">
-                <option value="seleccionar">Seleccionar</option>
                 <option value="Haemophilus influenza tipo B">Haemophilus influenza tipo B</option>
                 <option value="Tdpa">Tdpa</option>
                 <option value="DTPa">DTPa</option>
@@ -53,9 +55,9 @@
             <label>Fecha de Vacunacion</label><br>
             <input style="width: 100%; height: 55px; border-color: #007bff;" type="date" id="fechaVacuna"
                 name="fechaVacuna" [ngClass]="{'is-invalid': control.fechaVacuna.errors && control.fechaVacuna.touched}"
-                formControlName="fechaVacuna" placeholder="Fecha de Nacimiento">
+                formControlName="fechaVacuna" placeholder="Fecha Vacuna">
             <div *ngIf="control.fechaVacuna.errors" class="invalid-feedback">
-                <div *ngIf="control.fechaVacuna.errors.required">Se requiere la fechana vacunacion</div>
+                <div *ngIf="control.fechaVacuna.errors.required">Se requiere la fecha de la vacunacion</div>
             </div>
         </div>
 

@@ -32,7 +32,7 @@ export class VacunaRegistroComponent implements OnInit {
     this.vacuna.idVacuna = '';
     this.vacuna.tipoVacuna = '';
     this.vacuna.cedula = '';
-    this.vacuna.fechaVacuna = new Date(Date.now());
+    this.vacuna.fechaVacuna;
 
     this.formregistro = this.formBuilder.group({
       idVacuna: [this.vacuna.idVacuna, [Validators.required, Validators.maxLength(12)]],
