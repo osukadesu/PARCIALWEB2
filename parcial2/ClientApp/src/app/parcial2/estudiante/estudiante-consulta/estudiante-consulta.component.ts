@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaService } from 'src/app/services/persona.service';
-import { Persona } from '../../models/persona';
+import { EstudianteService } from 'src/app/services/estudiante.service';
+import { Estudiante } from '../../models/estudiante';
 
 @Component({
-  selector: 'app-persona-consulta',
-  templateUrl: './persona-consulta.component.html',
-  styleUrls: ['./persona-consulta.component.css']
+  selector: 'app-estudiante-consulta',
+  templateUrl: './estudiante-consulta.component.html',
+  styleUrls: ['./estudiante-consulta.component.css']
 })
-export class PersonaConsultaComponent implements OnInit {
-  personas: Persona[];
+export class EstudianteConsultaComponent implements OnInit {
+  estudiantes: Estudiante[];
   searchText: string;
-  constructor(private personaService: PersonaService) { }
+  constructor(private estudianteService: EstudianteService) { }
 
   ngOnInit(){
-    this.personaService.get().subscribe(result => {
-      this.personas = result;
+    this.estudianteService.get().subscribe(result => {
+      this.estudiantes = result;
       });
   }
 

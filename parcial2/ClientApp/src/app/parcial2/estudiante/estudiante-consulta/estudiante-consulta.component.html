@@ -1,7 +1,7 @@
-<title>CONSULTAR CLIENTES</title>
+<title>CONSULTAR ESTUDIANTES</title>
 <br>
 <div align="center"><img src="assets/consultar.png" alt="Logo"><br>
-    <h1>CONSULTAR CLIENTES</h1>
+    <h1>CONSULTAR ESTUDIANTES</h1>
 </div><br>
 
 <form class="form-inline" class="container" id="Buscador">
@@ -10,14 +10,14 @@
 
 <!--<button id="divcontainer2" type="button" class="btn btn-primary">Consultar</button>-->
 <div class="table-responsive" id="rcorners1">
-    <table class="table table-bordered" id="myTable" *ngIf='personas && personas.length'>
+    <table class="table table-bordered" id="myTable" *ngIf='estudiantes && estudiantes.length'>
         <thead>
             <tr class="thead-dark">
                 <th (click)="sortTable(0)" scope="col">#</th>
                 <th (click)="sortTable(1)">Cedula</th>
                 <th (click)="sortTable(2)">Nombre</th>
                 <th (click)="sortTable(5)">Apellido</th>
-                <th (click)="sortTable(6)">Edad</th>
+                <th (click)="sortTable(6)">Fecha de Nacimiento</th>
                 <th (click)="sortTable(7)">Email</th>
                 <th (click)="sortTable(8)">Sexo</th>
                 <th (click)="sortTable(9)">Telefono</th>
@@ -25,15 +25,15 @@
             </tr>
         </thead>
         <tbody id="tbodypulsacion" class="table-primary">
-            <tr *ngFor="let persona of personas|filtroPersona:searchText; index as i ">
+            <tr *ngFor="let estudiante of estudiantes|filtroPersona:searchText; index as i ">
                 <td scope="row">{{ i + 1 }}</td>
-                <td>{{ persona.cedula }} </td>
-                <td>{{ persona.nombre}}</td>
-                <td>{{ persona.apellido }}</td>
-                <td>{{ persona.edad }}</td>
-                <td>{{ persona.email }}</td>
-                <td>{{ persona.sexo }}</td>
-                <td>{{ persona.telefono }}</td>
+                <td>{{ estudiante.cedula }} </td>
+                <td>{{ estudiante.nombre}}</td>
+                <td>{{ estudiante.apellido }}</td>
+                <td>{{ estudiante.fechanacimiento }}</td>
+                <td>{{ estudiante.email }}</td>
+                <td>{{ estudiante.sexo }}</td>
+                <td>{{ estudiante.telefono }}</td>
                <!-- <td> <a routerLink='/personaEdicion/{{cliente.cedula}}'>Modificar</a> <button id="divcontainer2" class="btn btn-primary">Eliminar</button></td> --> 
             </tr>
         </tbody>

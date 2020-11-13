@@ -13,10 +13,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from './@base/alert-modal/alert-modal.component';
-import { PersonaConsultaComponent } from './parcial2/persona/persona-consulta/persona-consulta.component';
-import { PersonaRegistroComponent } from './parcial2/persona/persona-registro/persona-registro.component';
 import { FiltroPersonaPipe } from './pipe/filtro-persona.pipe';
 import { CommonModule } from '@angular/common';
+import { EstudianteRegistroComponent } from './parcial2/estudiante/estudiante-registro/estudiante-registro.component';
+import { EstudianteConsultaComponent } from './parcial2/estudiante/estudiante-consulta/estudiante-consulta.component';
+import { VacunaRegistroComponent } from './parcial2/vacuna/vacuna-registro/vacuna-registro.component';
+import { VacunaConsultaComponent } from './parcial2/vacuna/vacuna-consulta/vacuna-consulta.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,11 @@ import { CommonModule } from '@angular/common';
     FetchDataComponent,
     FooterComponent,
     AlertModalComponent,
-    PersonaConsultaComponent,
-    PersonaRegistroComponent,
     FiltroPersonaPipe,
+    EstudianteRegistroComponent,
+    EstudianteConsultaComponent,
+    VacunaRegistroComponent,
+    VacunaConsultaComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

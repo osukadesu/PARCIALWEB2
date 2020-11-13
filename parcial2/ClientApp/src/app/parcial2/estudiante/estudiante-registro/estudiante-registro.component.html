@@ -1,7 +1,7 @@
-<title>REGISTRO PERSONA</title>
+<title>REGISTRO ESTUDIANTE</title>
 <br>
 <div align="center"><img src="assets/registrar.png" alt="Logo">
-    <h1>REGISTRO PERSONA</h1>
+    <h1>REGISTRO ESTUDIANTE</h1>
 </div><br>
 <div id="divcontainer" class="forms">
     <form id="FormularioRegistro" [formGroup]="formregistro">
@@ -49,12 +49,12 @@
         </div>
 
         <div>
-            <label>Edad</label><br>
-            <input type="number" id="edad" name="edad"
-                [ngClass]="{'is-invalid': control.edad.errors && control.edad.touched}" formControlName="edad"
-                placeholder="Edad">
-            <div *ngIf="control.edad.errors" class="invalid-feedback">
-                <div *ngIf="control.edad.errors.required">Se requiere la edad</div>
+            <label>Fecha de Nacimiento</label><br>
+            <input type="number" id="fechanacimiento" name="fechanacimiento"
+                [ngClass]="{'is-invalid': control.fechanacimiento.errors && control.fechanacimiento.touched}" formControlName="fechanacimiento"
+                placeholder="Fecha de Nacimiento">
+            <div *ngIf="control.fechanacimiento.errors" class="invalid-feedback">
+                <div *ngIf="control.fechanacimiento.errors.required">Se requiere la fechana de nacimiento</div>
             </div>
         </div>
 

@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -18,8 +19,8 @@ namespace Entidad
         [Column(TypeName = "varchar(10)")]
         public string Sexo { get; set; }
 
-        [Column(TypeName = "int")]
-        public int Edad { get; set; }
+        [Column(TypeName = "datetime")]
+        public DateTime FechaNacimiento { get; set; }
 
         [Column(TypeName = "int")]
         public int Telefono { get; set; }

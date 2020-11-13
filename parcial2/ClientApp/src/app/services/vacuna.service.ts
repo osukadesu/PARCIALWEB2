@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { tap, catchError } from 'rxjs/operators';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
-import { catchError, map, tap } from 'rxjs/operators';
-import { Proveedor } from '../parcial2/models/proveedor';
+import { Vacuna } from '../parcial2/models/vacuna';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProveedorService {
+export class VacunaService {
 
   baseUrl: string;
   constructor(
@@ -17,19 +17,18 @@ export class ProveedorService {
     private handleErrorService: HandleHttpErrorService) {
     this.baseUrl = baseUrl;
   }
-  get(): Observable<Proveedor[]> {
-    return this.http.get<Proveedor[]>(this.baseUrl + 'api/Proveedor')
+  get(): Observable<Vacuna[]> {
+    return this.http.get<Vacuna[]>(this.baseUrl + 'api/Vacuna')
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Proveedor[]>('Consulta Proveedor', null))
+        catchError(this.handleErrorService.handleError<Vacuna[]>('Consulta Vacuna', null))
       );
   }
-  post(proveedor: Proveedor): Observable<Proveedor> {
-    return this.http.post<Proveedor>(this.baseUrl + 'api/Proveedor', proveedor)
+  post(vacuna: Vacuna): Observable<Vacuna> {
+    return this.http.post<Vacuna>(this.baseUrl + 'api/Vacuna', vacuna)
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Proveedor>('Registrar Proveedor', null))
+        catchError(this.handleErrorService.handleError<Vacuna>('Registrar Vacuna', null))
       );
   }
-
 }

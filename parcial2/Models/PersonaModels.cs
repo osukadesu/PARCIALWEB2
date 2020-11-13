@@ -1,3 +1,4 @@
+using System;
 using Entidad;
 
 namespace PersonaModel
@@ -10,7 +11,7 @@ namespace PersonaModel
 
         public string Apellido { get; set; }
 
-        public int Edad { get; set; }
+        public DateTime FechaNacimiento { get; set; }
 
         public string Email { get; set; }
 
@@ -29,7 +30,7 @@ namespace PersonaModel
             Nombre = persona.Nombre;
             Apellido = persona.Apellido;
             Email = persona.Email;
-            Edad = persona.Edad;
+            FechaNacimiento = persona.FechaNacimiento;
             Sexo = persona.Sexo;
             Telefono = persona.Telefono;
             Ciudad = persona.Ciudad;

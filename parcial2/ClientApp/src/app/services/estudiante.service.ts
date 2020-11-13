@@ -3,12 +3,12 @@ import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HandleHttpErrorService } from '../@base/handle-http-error.service';
 import { catchError, map, tap } from 'rxjs/operators';
-import { Persona } from '../parcial2/models/persona';
+import { Estudiante } from '../parcial2/models/estudiante';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PersonaService {
+export class EstudianteService {
 
   baseUrl: string;
   constructor(
@@ -17,18 +17,19 @@ export class PersonaService {
     private handleErrorService: HandleHttpErrorService) {
     this.baseUrl = baseUrl;
   }
-  get(): Observable<Persona[]> {
-    return this.http.get<Persona[]>(this.baseUrl + 'api/Persona')
+  get(): Observable<Estudiante[]> {
+    return this.http.get<Estudiante[]>(this.baseUrl + 'api/Estudiante')
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Persona[]>('Consulta Persona', null))
+        catchError(this.handleErrorService.handleError<Estudiante[]>('Consulta Estudiante', null))
       );
   }
-  post(persona: Persona): Observable<Persona> {
-    return this.http.post<Persona>(this.baseUrl + 'api/Persona', persona)
+  post(estudiante: Estudiante): Observable<Estudiante> {
+    return this.http.post<Estudiante>(this.baseUrl + 'api/Estudiante', estudiante)
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Persona>('Registrar Persona', null))
+        catchError(this.handleErrorService.handleError<Estudiante>('Registrar Estudiante', null))
       );
   }
+
 }

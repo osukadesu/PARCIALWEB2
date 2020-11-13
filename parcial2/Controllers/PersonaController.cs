@@ -72,7 +72,7 @@ public class PersonaController : ControllerBase
             Nombre = personaInput.Nombre,
             Apellido =personaInput.Apellido,
             Sexo = personaInput.Sexo,
-            Edad = personaInput.Edad,
+            FechaNacimiento = personaInput.FechaNacimiento,
             Email = personaInput.Email,
             Telefono = personaInput.Telefono,
             Ciudad = personaInput.Ciudad,
