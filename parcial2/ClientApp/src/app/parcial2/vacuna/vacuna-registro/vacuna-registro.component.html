@@ -11,13 +11,10 @@
                 <a style="color: rgb(253, 253, 253); font-size: 20px" href="https://localhost:5001/estudianteregistro"> Registrar Estudiante</a>
             </button>
             <label for="estudiante">Seleccionar Cedula del Estudiante</label>
-            <select  id="cedula" name="cedula"
+            <select id="cedula" name="cedula"
                 [ngClass]="{'is-invalid': control.cedula.errors && control.cedula.touched}" formControlName="cedula">
-                <div *ngFor="let estudiante of estudiantes ">
-                    <option value="seleccionar">Seleccionar</option>
-                    <option value={{estudiante.cedula}}>Cedula: {{estudiante.cedula}}</option>
-                </div>
-               
+                <option value="seleccionar">Seleccionar</option>
+                <option *ngFor="let estudiante of estudiantes "value={{estudiante.cedula}}>Cedula: {{estudiante.cedula}}</option>
             </select>
             <div *ngIf="control.cedula.errors" class="invalid-feedback">
                 <div *ngIf="control.cedula.errors.required">Se requiere la cedula</div>
