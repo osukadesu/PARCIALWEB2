@@ -71,6 +71,7 @@ public class VacunaController : ControllerBase
             IdVacuna = vacunaInput.IdVacuna, 
             TipoVacuna = vacunaInput.TipoVacuna,
             FechaVacuna =vacunaInput.FechaVacuna,
+            Cedula = vacunaInput.Cedula,
         };
         return vacuna;
     }

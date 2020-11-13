@@ -29,23 +29,22 @@ export class VacunaRegistroComponent implements OnInit {
   }
   private buildForm() {
     this.vacuna = new Vacuna();
-    this.vacuna.idvacuna = '';
-    this.vacuna.tipovacuna = '';
+    this.vacuna.idVacuna = '';
+    this.vacuna.tipoVacuna = '';
     this.vacuna.cedula = '';
-    this.vacuna.fechavacuna = new Date(Date.now());
+    this.vacuna.fechaVacuna = new Date(Date.now());
 
     this.formregistro = this.formBuilder.group({
-      idvacuna: [this.vacuna.idvacuna, [Validators.required, Validators.maxLength(12)]],
-      tipovacuna: [this.vacuna.tipovacuna, Validators.required],
-      fechavacuna: [this.vacuna.fechavacuna, [Validators.required, Validators.min(1)]],
+      idVacuna: [this.vacuna.idVacuna, [Validators.required, Validators.maxLength(12)]],
+      tipoVacuna: [this.vacuna.tipoVacuna, Validators.required],
+      fechaVacuna: [this.vacuna.fechaVacuna, [Validators.required, Validators.min(1)]],
       cedula: [this.vacuna.cedula, [Validators.required, Validators.maxLength(12), this.ValidaCedula]],
-     
     });
   }
 
   private ValidaCedula(control: AbstractControl) {
     const cantidad = control.value;
-    if (cantidad <= 0 || cantidad >= 9999) {
+    if (cantidad <= 0 || cantidad >= 999999999999) {
       return { validCantidad: true, messageCantidad: 'Cantidad menor o igual a 0' };
     }
     return null;
@@ -68,7 +67,7 @@ export class VacunaRegistroComponent implements OnInit {
       if (p != null) {
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.cuerpo = 'Info: Se ha registrado una vacuna' + this.vacuna.tipovacuna;
+        messageBox.componentInstance.cuerpo = 'Info: Se ha registrado una vacuna: ' + this.vacuna.tipoVacuna +'Al estudiante: '+ this.vacuna.estudiante.nombre;
         this.vacuna = p;
       }
     });

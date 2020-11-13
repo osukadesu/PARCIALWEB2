@@ -1,21 +1,24 @@
-using Microsoft.AspNetCore.Mvc;
-using Logica;
-using Microsoft.Extensions.Configuration;
 using System.Linq;
 using Datos;
 using Entidad;
 using EstudianteModel;
+using Logica;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 [Route("api/[controller]")]
 [ApiController]
 public class EstudianteController : ControllerBase
 {
     private readonly EstudianteService _estudianteService;
+
     public IConfiguration Configuration { get; }
+
     public EstudianteController(ParcialContext context)
     {
         _estudianteService = new EstudianteService(context);
     }
+
     // GET: api/Estudiante​
     [HttpGet]
     public ActionResult<EstudianteViewModel> Gets()
@@ -27,9 +30,12 @@ public class EstudianteController : ControllerBase
         }
         else
         {
-            return Ok(response.Estudiantes.Select(p => new EstudianteViewModel(p)));
+            return Ok(response
+                .Estudiantes
+                .Select(p => new EstudianteViewModel(p)));
         }
     }
+
     // GET: api/Estudiante/5​
     [HttpGet("{cedula}")]
     public ActionResult<EstudianteViewModel> Get(string cedula)
@@ -41,9 +47,9 @@ public class EstudianteController : ControllerBase
     }
 
     // POST: api/Estudiante​
-
     [HttpPost]
-    public ActionResult<EstudianteViewModel> Post(EstudianteInputModel estudianteInput)
+    public ActionResult<EstudianteViewModel>
+    Post(EstudianteInputModel estudianteInput)
     {
         Estudiante estudiante = MapearEstudiante(estudianteInput);
         var response = _estudianteService.Guardar(estudiante);
@@ -55,7 +61,6 @@ public class EstudianteController : ControllerBase
     }
 
     // DELETE: api/Estudiante/5​
-
     [HttpDelete("{cedula}")]
     public ActionResult<string> Delete(string idestudiante)
     {
@@ -65,18 +70,19 @@ public class EstudianteController : ControllerBase
 
     private Estudiante MapearEstudiante(EstudianteInputModel estudianteInput)
     {
-        var estudiante = new Estudiante
-        {
-             Cedula = estudianteInput.Cedula,
+        var estudiante =
+            new Estudiante {
+                Cedula = estudianteInput.Cedula,
                 IdEstudiante = estudianteInput.Cedula,
                 Nombre = estudianteInput.Nombre,
-                Apellido =estudianteInput.Apellido,
+                Apellido = estudianteInput.Apellido,
                 FechaNacimiento = estudianteInput.FechaNacimiento,
                 Sexo = estudianteInput.Sexo,
                 Email = estudianteInput.Email,
                 Telefono = estudianteInput.Telefono,
-                Ciudad = estudianteInput.Ciudad,
-        };
+                Colegio = estudianteInput.Colegio,
+                NombreAcudiente = estudianteInput.NombreAcudiente,
+            };
         return estudiante;
     }
 }

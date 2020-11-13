@@ -28,20 +28,20 @@ export class EstudianteRegistroComponent implements OnInit {
     this.estudiante.apellido = '';
     this.estudiante.sexo = 'seleccionar';
     this.estudiante.email = '';
-    this.estudiante.fechanacimiento;
-    this.estudiante.telefono;
-    this.estudiante.nombreacudiente;
-    this.estudiante.colegio;
+    this.estudiante.fechaNacimiento;
+    this.estudiante.telefono=0;
+    this.estudiante.nombreAcudiente = '';
+    this.estudiante.colegio ='';
 
     this.formregistro = this.formBuilder.group({
       cedula: [this.estudiante.cedula, [Validators.required, Validators.maxLength(12), this.ValidaCedula]],
       nombre: [this.estudiante.nombre, Validators.required],
       apellido: [this.estudiante.apellido, Validators.required],
       sexo: [this.estudiante.sexo, [Validators.required, this.ValidaSexo]],
-      fechanacimiento: [this.estudiante.fechanacimiento, [Validators.required, Validators.min(1)]],
+      fechaNacimiento: [this.estudiante.fechaNacimiento, [Validators.required, Validators.min(1)]],
       email: [this.estudiante.email, Validators.required],
       telefono: [this.estudiante.telefono, Validators.required],
-      nombreacudiente: [this.estudiante.nombreacudiente, Validators.required],
+      nombreAcudiente: [this.estudiante.nombreAcudiente, Validators.required],
       colegio: [this.estudiante.colegio, Validators.required],
     });
   }

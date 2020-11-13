@@ -9,7 +9,7 @@ export class FiltroVacunaPipe implements PipeTransform {
   transform(vacuna: Vacuna[], searchText: string): any {
     if (searchText == null) return vacuna;
     return vacuna.filter(p =>
-      p.idvacuna.toLowerCase()
+      p.idVacuna.toLowerCase()
         .indexOf(searchText.toLowerCase()) !== -1);
   }
 }

@@ -28,6 +28,8 @@ namespace EstudianteModel
             Sexo = estudiante.Sexo;
             Telefono = estudiante.Telefono;
             Ciudad = estudiante.Ciudad;
+            Colegio=estudiante.Colegio;
+            NombreAcudiente =estudiante.NombreAcudiente;
         }
     }
 }

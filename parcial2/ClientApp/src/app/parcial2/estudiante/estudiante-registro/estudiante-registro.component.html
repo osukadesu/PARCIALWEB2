@@ -50,11 +50,11 @@
 
         <div>
             <label>Fecha de Nacimiento</label><br>
-            <input style="width: 100%; height: 55px; border-color: #007bff;" type="date" id="fechanacimiento" name="fechanacimiento"
-                [ngClass]="{'is-invalid': control.fechanacimiento.errors && control.fechanacimiento.touched}" formControlName="fechanacimiento"
+            <input style="width: 100%; height: 55px; border-color: #007bff;" type="date" id="fechaNacimiento" name="fechaNacimiento"
+                [ngClass]="{'is-invalid': control.fechaNacimiento.errors && control.fechaNacimiento.touched}" formControlName="fechaNacimiento"
                 placeholder="Fecha de Nacimiento">
-            <div *ngIf="control.fechanacimiento.errors" class="invalid-feedback">
-                <div *ngIf="control.fechanacimiento.errors.required">Se requiere la fechana de nacimiento</div>
+            <div *ngIf="control.fechaNacimiento.errors" class="invalid-feedback">
+                <div *ngIf="control.fechaNacimiento.errors.required">Se requiere la fechana de nacimiento</div>
             </div>
         </div>
 
@@ -80,11 +80,11 @@
 
         <div>
             <label>Nombre Acudiente</label>
-            <input type="text" id="nombreacudiente" name="nombreacudiente"
-                [ngClass]="{'is-invalid': control.nombreacudiente.errors && control.nombreacudiente.touched}"
-                formControlName="nombreacudiente" placeholder="Nombre Acudiente">
-            <div *ngIf="control.nombreacudiente.errors" class="invalid-feedback">
-                <div *ngIf="control.nombreacudiente.errors.required">Se requiere el nombre del acudiente</div>
+            <input type="text" id="nombreAcudiente" name="nombreAcudiente"
+                [ngClass]="{'is-invalid': control.nombreAcudiente.errors && control.nombreAcudiente.touched}"
+                formControlName="nombreAcudiente" placeholder="Nombre Acudiente">
+            <div *ngIf="control.nombreAcudiente.errors" class="invalid-feedback">
+                <div *ngIf="control.nombreAcudiente.errors.required">Se requiere el nombre del acudiente</div>
             </div>
         </div>
 
@@ -98,7 +98,6 @@
                 <div *ngIf="control.colegio.errors.required">Se requiere el nombre del colegio</div>
             </div>
         </div>
-
 
         <br>
         <button id="divcontainer2" class="btn btn-primary" (click)="onSubmit()" [disabled]="formregistro.invalid">
