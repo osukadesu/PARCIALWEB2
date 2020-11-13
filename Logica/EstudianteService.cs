@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Datos;
 using Entidad;
@@ -11,6 +9,10 @@ namespace Logica
     public class EstudianteService
     {
          private readonly ParcialContext _context;
+         public EstudianteService(ParcialContext context)
+        {
+            _context = context;
+        }
 
        public GuardarEstudianteResponse Guardar(Estudiante estudiante)
         {
