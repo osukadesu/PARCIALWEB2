@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EstudianteService } from 'src/app/services/estudiante.service';
 import { VacunaService } from 'src/app/services/vacuna.service';
+import { Estudiante } from '../../models/estudiante';
 import { Vacuna } from '../../models/vacuna';
 
 @Component({
@@ -8,11 +10,17 @@ import { Vacuna } from '../../models/vacuna';
   styleUrls: ['./vacuna-consulta.component.css']
 })
 export class VacunaConsultaComponent implements OnInit {
+  estudiantes: Estudiante[];
   vacunas: Vacuna[];
   searchText: string;
-  constructor(private vacunaService: VacunaService) { }
+  constructor(private vacunaService: VacunaService , private estudianteService: EstudianteService) { }
 
   ngOnInit(){
+    
+    this.estudianteService.get().subscribe(result => {
+      this.estudiantes = result;
+      });
+
     this.vacunaService.get().subscribe(result => {
       this.vacunas = result;
       });
