@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Vq/c1CMuBYhgPVPprw6/bjAH2Fe+uhNuvEjM8Keg48A6pqoDbzcXbGtCbuJuus1iOa6yqMNo45IuuKffgTG48A==",
+  "dgSpecHash": "LLAPdT+xXeCmFdZHPGd6qv+Tik5wAY4h2XGr2vJcEV372YOFeayehKQgjao2DvQKN+n6XemSyH5PfGGfDMx0HQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj",
+  "projectFilePath": "C:\\Users\\Osuka\\Desktop\\PARCIALWEB2\\Entidad\\Entidad.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Osuka\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
