@@ -1,1 +1,62 @@
-<p>vacuna-registro works!</p>
+<title>REGISTRO VACUNA</title>
+<br>
+<div align="center"><img src="assets/registrar.png" alt="Logo">
+    <h1>REGISTRO VACUNA</h1>
+</div><br>
+<div id="divcontainer" class="forms">
+    <form id="FormularioRegistro" [formGroup]="formregistro">
+        <div class="form-group">
+            <label>Id Vacuna</label>
+            <input id= idvacuna name="idvacuna" [ngClass]="{'is-invalid': control.idvacuna.errors && control.idvacuna.touched}"
+                type="text"  formControlName="idvacuna" placeholder="Id Vacuna">
+            <div *ngIf="control.idvacuna.errors" class="invalid-feedback">
+                <div *ngIf="control.idvacuna.errors.required">Se requiere la idvacuna</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Tipo de Vacuna</label>
+            <select id="tipovacuna" name="tipovacuna" [ngClass]="{'is-invalid': control.tipovacuna.errors && control.tipovacuna.touched}"
+                formControlName="tipovacuna">
+                <option value="seleccionar">Seleccionar</option>
+                <option value="Haemophilus influenza tipo B">Haemophilus influenza tipo B</option>
+                <option value="Tdpa">Tdpa</option>
+                <option value="DTPa">Recepcionista</option>
+                <option value="Hepatitis A">Hepatitis A</option>
+                <option value="Hepatitis B"> Hepatitis B </option>
+                <option value="virus del papiloma Humano"> virus del papiloma Humano</option>
+            </select>
+            <div *ngIf="control.tipovacuna.errors" class="invalid-feedback">
+                <div *ngIf="control.tipovacuna.errors.required">Se requiere el tipovacuna</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Cedula</label>
+            <input id= cedula name="cedula" [ngClass]="{'is-invalid': control.cedula.errors && control.cedula.touched}"
+                type="text"  formControlName="cedula" placeholder="Cedula">
+            <div *ngIf="control.cedula.errors" class="invalid-feedback">
+                <div *ngIf="control.cedula.errors.required">Se requiere la cedula</div>
+                <div *ngIf="control.cedula.errors.maxlength">Caracteres mayores a 12</div>
+            </div>
+        </div>
+
+        <div>
+            <label>Fecha de Vacunacion</label><br>
+            <input style="width: 100%; height: 55px; border-color: #007bff;" type="date" id="fechavacuna" name="fechavacuna"
+                [ngClass]="{'is-invalid': control.fechavacuna.errors && control.fechavacuna.touched}" formControlName="fechavacuna"
+                placeholder="Fecha de Nacimiento">
+            <div *ngIf="control.fechavacuna.errors" class="invalid-feedback">
+                <div *ngIf="control.fechavacuna.errors.required">Se requiere la fechana vacunacion</div>
+            </div>
+        </div>
+
+        <br>
+        <button id="divcontainer2" class="btn btn-primary" (click)="onSubmit()" [disabled]="formregistro.invalid">
+            <span>
+                <a href="https://localhost:5001/clienteregistro"></a>
+            </span>
+            Guardar</button>
+    </form>
+</div>
+<br><br>
