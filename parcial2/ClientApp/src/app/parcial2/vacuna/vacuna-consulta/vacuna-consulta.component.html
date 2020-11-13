@@ -5,7 +5,8 @@
 </div><br>
 
 <form class="form-inline" class="container" id="Buscador">
-    <input class="form-control mr-sm-2" name="filtroVacuna" [(ngModel)]="searchText" type="text" placeholder="Buscar por Id Vacuna" aria-label="Search">
+    <input class="form-control mr-sm-2" name="filtroVacuna" [(ngModel)]="searchText" type="text"
+        placeholder="Buscar por Id Vacuna" aria-label="Search">
 </form><br><br>
 
 <!--<button id="divcontainer2" type="button" class="btn btn-primary">Consultar</button>-->
@@ -15,10 +16,14 @@
             <tr class="thead-dark">
                 <th (click)="sortTable(0)" scope="col">#</th>
                 <th (click)="sortTable(1)">Id Vacuna</th>
-                <th (click)="sortTable(2)">Cedula Estudiante</th>
+                <th (click)="sortTable(2)">Cedula Estudiante
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
+                        Ver Estudiante
+                    </button>
+                </th>
                 <th (click)="sortTable(3)">Tipo de Vacuna</th>
                 <th (click)="sortTable(4)">Fecha de Vacuna</th>
-                <!-- <th (click)="sortTable(12)">Modificar/Eliminar</th> -->
             </tr>
         </thead>
         <tbody id="tbodypulsacion" class="table-primary">
@@ -28,9 +33,32 @@
                 <td>{{ vacuna.cedula }}</td>
                 <td>{{ vacuna.tipoVacuna}}</td>
                 <td>{{ vacuna.fechaVacuna }}</td>
-               <!-- <td> <a routerLink='/personaEdicion/{{cliente.cedula}}'>Modificar</a> <button id="divcontainer2" class="btn btn-primary">Eliminar</button></td> --> 
+                <!-- <td> <a routerLink='/personaEdicion/{{cliente.cedula}}'>Modificar</a> <button id="divcontainer2" class="btn btn-primary">Eliminar</button></td> -->
             </tr>
         </tbody>
     </table>
 </div>
 <br><br>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Estudiante</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -67,7 +67,7 @@ export class VacunaRegistroComponent implements OnInit {
       if (p != null) {
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.cuerpo = 'Info: Se ha registrado una vacuna: ' + this.vacuna.tipoVacuna +'Al estudiante: '+ this.vacuna.estudiante.nombre;
+        messageBox.componentInstance.cuerpo = 'Info: Se ha registrado la vacuna: ' + this.vacuna.idVacuna;
         this.vacuna = p;
       }
     });
