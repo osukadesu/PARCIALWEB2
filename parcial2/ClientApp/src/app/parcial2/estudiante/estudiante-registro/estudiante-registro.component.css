@@ -22,7 +22,7 @@
     padding: 0.5% 4%;
     cursor: pointer;
     
-    color: #ffffff;
+    color: #000000;
     background-color: #10eaf0;
     text-align: center;
     display: inline-block;
@@ -39,11 +39,9 @@
   
   #divcontainer {
     border-radius: 25px;
-    border: 2px solid #ffffff;
-    background-color: #007bff;
-    width: 98%;
+    width: 80%;
     position: relative;
-    left: 1%;
+    left: 12%;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
@@ -70,8 +68,7 @@
   }
 
   form {
-    
     text-align: left;
-    color: #ffffff;
+    color: #000000;
   }
   

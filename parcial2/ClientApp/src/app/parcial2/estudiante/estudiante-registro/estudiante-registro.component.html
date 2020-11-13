@@ -50,7 +50,7 @@
 
         <div>
             <label>Fecha de Nacimiento</label><br>
-            <input type="number" id="fechanacimiento" name="fechanacimiento"
+            <input style="width: 100%; height: 55px; border-color: #007bff;" type="date" id="fechanacimiento" name="fechanacimiento"
                 [ngClass]="{'is-invalid': control.fechanacimiento.errors && control.fechanacimiento.touched}" formControlName="fechanacimiento"
                 placeholder="Fecha de Nacimiento">
             <div *ngIf="control.fechanacimiento.errors" class="invalid-feedback">
@@ -85,3 +85,4 @@
             Guardar</button>
     </form>
 </div>
+<br><br>
